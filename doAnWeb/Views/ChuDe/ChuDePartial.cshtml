@@ -1,0 +1,18 @@
+﻿@{
+    Layout = null;
+}
+
+@using doAnWeb.Models;
+@model List<ChuDe>
+
+        <ul class="list-group list-group-flush text-left">
+            <li class="list-group-item" style="background-color:red;"><a href="#" style="text-transform:none; color:white; font-weight:bold">Danh Sách Sản Phẩm</a></li>
+            @{
+                foreach(var item in Model){
+                 <li class="list-group-item" style="background-color:pink">
+                     <a href="@Url.Action("SachTheoCD", "ChuDe", new { @maCD=item.MaChuDe})" style="text-transform:uppercase; text-decoration:none;">@item.TenChuDe</a>
+                 </li>   
+                }
+                <li class="list-group-item" style="background-color:grey"><a href="#" style="text-transform:uppercase; text-decoration:none;"> </a></li>
+            }
+        </ul>

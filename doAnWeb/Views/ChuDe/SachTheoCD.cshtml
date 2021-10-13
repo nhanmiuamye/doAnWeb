@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "SachTheoCD";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@using doAnWeb.Models;
+@model List<Sach>
+
+<h2>List Sản Phẩm </h2>
+@ViewBag.Sach
+<div class="row">
+@{
+    foreach (var item in Model)
+    {
+        <div class="col-4">
+            <img src="@Url.Content("~/HinhAnhSP/"+item.AnhBia)" width="70%" height="70%" alt="image">
+            @if (item.TenSach.Length > 30)
+            {
+                <p><strong title="@item.TenSach">Tiêu đề: @item.TenSach.Substring(0,30)...</strong><br /><a href="@Url.Action("XemChiTiet", "Sach", new {@ms = item.MaSach})">Xem Chi tiết</a></p>
+            }
+            else
+            {
+                <p><strong title="@item.TenSach">Tiêu đề: @item.TenSach</strong><br /><a href="@Url.Action("XemChiTiet", "Sach", new { @ms = item.MaSach})">Xem Chi tiết</a></p>
+            <div class="clear"></div>
+            }
+                
+        </div >
+    }
+}
+    </div>

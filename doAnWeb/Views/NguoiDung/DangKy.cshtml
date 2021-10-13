@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "DangKy";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Đăng ký thành viên!</h2>
+<table class="table">
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        {
+            <tr>
+                <td style="text-align:right;">Họ Tên KH</td>
+                <td> @Html.TextBox("HotenKH","",new {@class = "form-control"}) @*<input type="text" name="HotenKH" style="width:200px" class="form-control">*@ @ViewData["Loi1"]</td>
+            </tr>
+        <tr>
+            <td style="text-align:right;">Tên Đăng Nhập</td>
+            <td>@Html.TextBox("TenDN","",new { @class="form-control"}) @ViewData["Loi2"]</td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">Mật Khẩu</td>
+            <td>@Html.TextBox("Matkhau","",new { @class="form-control"}) @ViewData["Loi3"]</td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">Nhập Lại Mật Khẩu</td>
+            <td>@Html.TextBox("ReMatKhau","",new { @class="form-control"}) @ViewData["Loi4"]</td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">Điện Thoại</td>
+            <td>@Html.TextBox("Dienthoai","",new { @class="form-control"}) @ViewData["Loi5"]</td>
+        </tr>
+        <tr>
+            <td style="text-align:right;">Ngày Sinh</td>
+            <td><input type="date" name="NgaySinh" style="width:400px" class="form-control" /></td>
+        </tr>
+         <tr>
+            <td style="text-align:right;">Email</td>
+            <td><input type="text" name="Email" style="width:400px" class="form-control" /></td>
+        </tr>
+         <tr>
+            <td style="text-align:right;">Địa chỉ</td>
+            <td><input type="text" name="Diachi" style="width:400px" class="form-control" /></td>
+        </tr>
+        <tr>
+            <td>
+            <input type="submit" class="btn btn-primary" value="ĐĂNG KÝ"/>
+             </td>
+        </tr>
+        
+        } 
+    }
+</table>

@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "DangNhap";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>ĐĂNG NHẬP</h2>
+<table class="table">
+      @using (Html.BeginForm())
+      {
+          @Html.ValidationSummary(true)
+          {
+      <tr>
+            <td style="text-align:right;">TÊN ĐĂNG NHẬP</td>
+            <td>@Html.TextBox("TenDN","",new { @class="form-control"}) @ViewData["Loi2"]</td>
+        </tr>
+     <tr>
+            <td style="text-align:right;">MẬT KHẨU</td>
+            <td>@Html.TextBox("Matkhau","",new { @class="form-control"}) @ViewData["Loi3"]</td>
+        </tr>
+          <tr>
+            <td>
+            <input type="submit" class="btn btn-primary" value="ĐĂNG NHẬP"/> @ViewBag.TB
+             </td>
+        </tr>
+          }
+      }
+    </table>

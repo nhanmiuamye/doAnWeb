@@ -1,0 +1,142 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Web Bán Sách FaHaSa</title>
+        <!--Bootstrap 4-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container text-center">
+        <!--NAVIGATION-->
+       <!-- <div class="container-fluid"> -->
+        <nav class="navbar navbar-expand-sm bg-warning navbar-light">
+                
+                <a class="navbar-brand row" href="#"><img src="~/Images/LogoFaHaSa.jpg" width="100" class="rounded"/></a>
+                
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent"">
+                            <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                                <li class="nav-item nav-link">
+                                    @Html.ActionLink("Trang chủ ", "SachPartial", "Sach")
+                                </li>
+                                <li class="nav-item nav-link">
+                                    @Html.ActionLink("Đăng Ký ", "DangKy", "NguoiDung")
+                                </li>
+                                <li class="nav-item nav-link">
+                                   @Html.ActionLink("Đăng Nhập ", "DangNhap", "NguoiDung")
+                                </li>
+                                <li class="nav-item nav-link">
+                                    
+                                    @Html.ActionLink("Liên Hệ  ", "LienHe", "GioHang")
+                                </li>
+                               @* <li class="nav-item"><img src="~/Images/Cart.PNG" / width="10%"></li>*@
+                                <li class="nav-item nav-link">
+                                    @Html.Action("GioHangPartial","GioHang")
+                                </li>
+                                 
+                            </ul>
+                            <input class="form-control mr-2 w-25" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-link" type="submit" ><img src="~/Images/search.JPG" width="100" class="rounded" /></button>
+                  </div>    
+
+                
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent1" >
+                    <ul class="navbar-nav mr-auto mb-2 mb-lg-0" >   
+                        
+                        <li class="nav-item dropdown">
+                            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                           Languages   </button>
+                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#"><img src="~/Images/VietNamFlag.JPG" />  VietNamese</a></li>
+                                <li><a class="dropdown-item" href="#"><img src="~/Images/EnglishFlag.JPG" />  English</a></li>
+                             </ul>
+                        </li>
+                    </ul>                
+            </div>
+         
+        </nav>
+        <!-- </div> -->
+        <!--CONTAIN-->
+        <div class="row">
+            <div class="col col-md-3 card" style="background-color:brown">
+                <ul class="list-group list-group-flush text-left" style="background-color:yellowgreen">
+                    @Html.Action("ChuDePartial", "ChuDe")
+                    @*<li class="list-group-item" style="background-color:darkorange;"><a href="#" style="text-transform:uppercase; text-decoration:none; color:white; font-weight:bold;">Chủ Đề Sách</a></li>
+                    <li class="list-group-item"><a href="#" style="text-transform:uppercase; text-decoration:none;">Chủ đề 1</a></li>
+                    <li class="list-group-item"><a href="#" style="text-transform:uppercase; text-decoration:none;">Chủ đề 1</a></li>
+                    <li class="list-group-item"><a href="#" style="text-transform:uppercase; text-decoration:none;">Chủ đề 1</a></li>
+                    <li class="list-group-item"><a href="#" style="text-transform:uppercase; text-decoration:none;">Chủ đề 1</a></li>
+                    <li class="list-group-item"><a href="#" style="text-transform:uppercase; text-decoration:none;">Chủ đề 1</a></li>
+                    <li class="list-group-item"><a href="#" style="text-transform:uppercase; text-decoration:none;">Chủ đề 1</a></li>
+                    <li class="list-group-item"><a href="#" style="text-transform:uppercase; text-decoration:none;">Chủ đề 1</a></li>
+                    <li class="list-group-item"><a href="#" style="text-transform:uppercase; text-decoration:none;">Chủ đề 1</a></li>
+                    <li class="list-group-item"><a href="#" style="text-transform:uppercase; text-decoration:none;">Chủ đề 1</a></li>
+                    <li class="list-group-item"><a href="#" style="text-transform:uppercase; text-decoration:none;"> </a></li>*@
+                </ul>
+                <ul class="list-group list-group-flush text-left" style="background-color:burlywood">
+                    @Html.Action("NhaXuatBanPartial", "NhaXuatban")
+                    @*<li class="list-group-item" style="background-color:darkorange;"><a href="#" style="text-transform:uppercase; text-decoration:none; color:white; font-weight:bold;">Nhà xuất bản</a></li>
+                    <li class="list-group-item"><a href="#" style="text-transform:uppercase; text-decoration:none;">Nhà xuât bản 1</a></li>
+                    <li class="list-group-item"><a href="#" style="text-transform:uppercase; text-decoration:none;">Nhà xuât bản 2</a></li>
+                    <li class="list-group-item"><a href="#" style="text-transform:uppercase; text-decoration:none;">Nhà xuât bản 3</a></li>
+                    <li class="list-group-item"><a href="#" style="text-transform:uppercase; text-decoration:none;">Nhà xuât bản 4</a></li>
+                    <li class="list-group-item"><a href="#" style="text-transform:uppercase; text-decoration:none;">Nhà xuât bản 5</a></li>*@
+                    
+                </ul>    
+            </div>
+            <div class="col col-md-9"  style="background-color:darkcyan;">
+                <div class="row">
+                    <div class ="col">
+
+                        <div id="carouselExampleControls" class="carousel w-100 mx-auto mt-3" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="/Images/Anh1.png" class="d-block w-100 " alt="Ảnh 1" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/Images/Anh2.png" class="d-block w-100" alt="Ảnh 2" />
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/Images/Anh3.png" class="d-block w-100 " alt="Ảnh 3" />
+                            </div>
+                            
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                <div>
+                        @RenderBody()
+
+
+
+                </div>
+            </div>
+       </div>
+        <!--Footer-->
+        <div class="row" style="background-color:black; text-align:center;">
+             <div class="col text-light mt-3 mb-3" style="text-align:center;"><p>Trường Đại Học Công Nghiệp Thực Phẩm TP. HCM</p><br />
+- Địa chỉ: 140 Lê Trọng Tấn,P.Tây Thạnh, Q.Tân Phú, Thành phố Hồ Chí Minh.<br />
+- Sinh viên làm đồ án: Phạm Doãn Nguyên Tùng - 2001181406 và Phan Quốc Khang - 2001180778</div>
+        </div>
+    </div>
+    
+</body>
+</html>
+
